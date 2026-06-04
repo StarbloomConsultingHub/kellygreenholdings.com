@@ -1,7 +1,4 @@
 ---
-// Kelly Green Holdings — Core Layout Wrapper
-// Clean, grounded, operator-built holding company
-
 import '../styles/global.css';
 
 export interface Props {
@@ -35,18 +32,17 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Kelly Green Holdings" />
     <meta property="og:url" content={canonicalURL ?? Astro.url.href} />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | Kelly Green Holdings`} />
     <meta name="twitter:description" content={description} />
-
     <link rel="canonical" href={canonicalURL ?? Astro.url.href} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+  <body class="bg-slate-50 text-slate-800">
     <slot />
   </body>
 </html>

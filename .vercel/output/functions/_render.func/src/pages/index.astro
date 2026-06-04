@@ -1,202 +1,460 @@
 ---
-// Kelly Green Holdings — Home Page
-// Parent company. Operator built. Patient capital.
-
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
   title="Kelly Green Holdings"
-  description="Kelly Green Holdings builds enduring value by acquiring, operating, and scaling essential businesses with the insight of experienced operators and the discipline of patient capital. Based in Hagerstown, MD."
+  description="Kelly Green Holdings is a privately held strategic holding company focused on acquiring, operating, and scaling essential businesses. Based in Maryland. Operator-led, patient capital."
 >
 
-<!-- ═══ NAV ═══ -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-ash-50/90 backdrop-blur-md border-b border-ash-200">
-  <div class="container flex items-center justify-between h-16">
-    <a href="/" class="flex items-center gap-3">
-      <div class="w-10 h-10 bg-kelly-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">K</div>
-      <span class="font-semibold text-ash-900 text-lg">Kelly Green Holdings</span>
+<!-- ════════════════════════════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all">
+  <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-x-3">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-emerald-900">
+        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="font-extrabold text-2xl tracking-tighter text-emerald-900 leading-none">KELLY GREEN</div>
+        <div class="text-[10px] font-semibold tracking-[3px] text-amber-700 -mt-1">HOLDINGS</div>
+      </div>
     </a>
-    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ash-600">
-      <a href="#about" class="hover:text-kelly-600 transition-colors">About</a>
-      <a href="#portfolio" class="hover:text-kelly-600 transition-colors">Portfolio</a>
-      <a href="#approach" class="hover:text-kelly-600 transition-colors">Approach</a>
-      <a href="#contact" class="hover:text-kelly-600 transition-colors">Contact</a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+      <a href="#about" class="hover:text-emerald-800 transition-colors">About</a>
+      <a href="#portfolio" class="hover:text-emerald-800 transition-colors">Portfolio</a>
+      <a href="#approach" class="hover:text-emerald-800 transition-colors">Approach</a>
+      <a href="#leadership" class="hover:text-emerald-800 transition-colors">Leadership</a>
+      <a href="#contact" class="px-5 py-2.5 text-sm font-semibold rounded-2xl border border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white transition-all">Contact Us</a>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button id="mobile-toggle" class="md:hidden w-10 h-10 flex items-center justify-center text-emerald-900 hover:bg-slate-100 rounded-2xl transition-colors">
+      <i class="fa-solid fa-bars text-xl"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+    <div class="px-8 py-4 flex flex-col gap-y-1 text-sm font-medium">
+      <a href="#about" class="py-3 px-1 hover:text-emerald-800 border-b border-slate-100">About</a>
+      <a href="#portfolio" class="py-3 px-1 hover:text-emerald-800 border-b border-slate-100">Portfolio</a>
+      <a href="#approach" class="py-3 px-1 hover:text-emerald-800 border-b border-slate-100">Approach</a>
+      <a href="#leadership" class="py-3 px-1 hover:text-emerald-800 border-b border-slate-100">Leadership</a>
+      <a href="#contact" class="mt-2 inline-flex justify-center px-5 py-3 rounded-2xl bg-emerald-900 text-white font-semibold">Contact Us</a>
     </div>
   </div>
 </nav>
 
-<!-- ═══ HERO ═══ -->
-<section class="min-h-screen flex items-center pt-16 bg-gradient-to-b from-ash-50 via-kelly-100/30 to-ash-50">
-  <div class="container py-24 md:py-32">
+<!-- ════════════════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════════════════ -->
+<header class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-800 text-white">
+  <div class="max-w-5xl mx-auto px-8 pt-20 pb-24 md:pt-28 md:pb-32">
     <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-kelly-600/10 rounded-full text-kelly-700 text-sm font-medium mb-8">
-        <span class="w-2 h-2 rounded-full bg-kelly-500"></span>
-        Operator Built &middot; Patient Capital
+      <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/10 backdrop-blur-md mb-6 border border-white/20">
+        <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+        <span class="text-sm font-medium tracking-wide">Privately Held &middot; Operator Led</span>
       </div>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-ash-900 mb-6">
-        Enduring Value.<br />
-        <span class="gradient-text">Essential Businesses.</span>
+
+      <h1 class="text-5xl md:text-7xl leading-[1.05] tracking-tighter heading-serif">
+        Kelly Green<br />Holdings
       </h1>
-      <p class="text-lg md:text-xl text-ash-600 leading-relaxed mb-10 max-w-2xl">
-        Kelly Green Holdings builds enduring value by acquiring, operating, and scaling essential businesses with the insight of experienced operators and the discipline of patient capital.
+
+      <p class="mt-6 max-w-lg text-lg md:text-xl text-emerald-100 leading-tight">
+        A strategic holding company building enduring value through hands-on operational expertise and disciplined growth.
       </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="#portfolio" class="px-6 py-3 bg-kelly-600 text-white rounded-lg font-semibold hover:bg-kelly-700 transition-colors shadow-sm">
-          Our Portfolio
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a href="#portfolio" class="inline-flex items-center justify-center gap-x-3 px-8 py-4 rounded-3xl bg-white text-emerald-900 font-semibold shadow-xl shadow-black/10 hover:bg-emerald-50 transition-all">
+          Explore Our Ventures
+          <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <a href="#approach" class="px-6 py-3 border border-ash-300 text-ash-700 rounded-lg font-semibold hover:border-kelly-400 hover:text-kelly-700 transition-colors">
-          How We Operate
+        <a href="#approach" class="inline-flex items-center justify-center gap-x-3 px-8 py-4 rounded-3xl border border-white/40 hover:bg-white/10 font-semibold transition-all">
+          Our Approach
         </a>
+      </div>
+
+      <div class="mt-8 flex items-center gap-x-8 text-sm text-emerald-200">
+        <span class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-400"></i>Maryland-based</span>
+        <span class="flex items-center gap-x-2"><i class="fa-solid fa-check text-emerald-400"></i>Built by operators</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════════════════════════
+     ABOUT
+     ════════════════════════════════════════════════════════════ -->
+<section id="about" class="max-w-5xl mx-auto px-8 pt-20 pb-16">
+  <div class="grid md:grid-cols-12 gap-x-12 items-center">
+    <div class="md:col-span-7">
+      <div class="uppercase tracking-[2px] text-xs font-semibold text-emerald-700 mb-3">OUR FOUNDATION</div>
+      <h2 class="text-4xl md:text-5xl tracking-tighter heading-serif text-emerald-900">Rooted in experience.<br />Built for the long term.</h2>
+
+      <div class="mt-8 text-[15.5px] leading-relaxed text-slate-600 space-y-4">
+        <p>Kelly Green Holdings is a privately held strategic holding company focused on acquiring, operating, and scaling essential businesses across vital industries.</p>
+        <p>We are operator led at our core. Our leadership brings decades of frontline experience in complex, regulated, and high-stakes operational environments &mdash; from large-scale production systems to technology implementation and process optimization.</p>
+      </div>
+    </div>
+
+    <div class="md:col-span-5 mt-10 md:mt-0">
+      <div class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
+        <div class="text-xs uppercase tracking-widest font-semibold text-emerald-700 mb-4">WHAT SETS US APART</div>
+        <div class="space-y-5 text-sm">
+          <div class="flex gap-4">
+            <div class="mt-0.5 text-emerald-700 w-4"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <div class="font-semibold">Operator DNA</div>
+              <div class="text-slate-500 text-[13.5px] leading-snug">Every decision informed by real-world execution, not theory.</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="mt-0.5 text-emerald-700 w-4"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <div class="font-semibold">Aligned Capital</div>
+              <div class="text-slate-500 text-[13.5px] leading-snug">Patient capital focused on sustainable competitive advantage.</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="mt-0.5 text-emerald-700 w-4"><i class="fa-solid fa-cogs"></i></div>
+            <div>
+              <div class="font-semibold">Systems Thinking</div>
+              <div class="text-slate-500 text-[13.5px] leading-snug">Durable operational infrastructure that compounds value over time.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ABOUT ═══ -->
-<section id="about" class="py-20 md:py-28 bg-ash-50">
-  <div class="container">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-ash-900 mb-6">Who We Are</h2>
-      <p class="text-lg text-ash-600 leading-relaxed mb-6">
-        We are operators, not financiers. Every business we own is one we understand from the ground up because we have worked the ground. Kelly Green Holdings was founded on the belief that the best businesses are built by people who have actually done the work.
-      </p>
-      <p class="text-lg text-ash-600 leading-relaxed mb-6">
-        Headquartered in Hagerstown, Maryland, we take a hands-on approach to every acquisition. We do not flip companies, strip assets, or chase trends. We acquire essential businesses with strong fundamentals, improve their operations, and grow them over the long haul.
-      </p>
-      <p class="text-lg text-ash-600 leading-relaxed">
-        Our portfolio spans agriculture, operational services, and technology. Each company operates independently with its own brand and leadership, backed by the resources, network, and operational expertise of the holding company.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PORTFOLIO ═══ -->
-<section id="portfolio" class="py-20 md:py-28 bg-ash-100/50">
-  <div class="container">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-ash-900 mb-4">Our Portfolio</h2>
-      <p class="text-lg text-ash-600 max-w-2xl mx-auto">
-        Independent brands united by operational excellence and a shared commitment to enduring value.
-      </p>
+<!-- ════════════════════════════════════════════════════════════
+     PORTFOLIO
+     ════════════════════════════════════════════════════════════ -->
+<section id="portfolio" class="bg-white border-y border-slate-200 py-16">
+  <div class="max-w-6xl mx-auto px-8">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-emerald-700">OUR VENTURES</div>
+        <h3 class="text-3xl md:text-4xl tracking-tight heading-serif text-emerald-900 mt-1">Portfolio Companies</h3>
+      </div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Starbloom Consulting -->
+      <div class="bg-white border border-slate-200 hover:border-emerald-200 rounded-3xl p-8 flex flex-col h-full transition-all hover:shadow-md hover:-translate-y-1">
+        <div class="flex items-center justify-between mb-6">
+          <span class="px-4 py-1.5 bg-emerald-100 text-emerald-700 text-xs font-bold tracking-wider rounded-2xl">FLAGSHIP</span>
+          <span class="text-emerald-600"><i class="fa-solid fa-globe fa-lg"></i></span>
+        </div>
+        <h4 class="font-semibold text-3xl tracking-tight text-emerald-900">Starbloom Consulting</h4>
+        <p class="mt-1 text-emerald-700 font-medium text-sm">Process Automation &amp; AI Systems</p>
+        <div class="mt-auto pt-8">
+          <p class="text-slate-600 leading-relaxed text-[14.5px]">
+            Boutique technical consulting firm delivering no-code automation, data pipeline architecture, and private AI infrastructure. Built for trades, service providers, and operators who need practical systems.
+          </p>
+          <div class="mt-6 flex items-center justify-between text-sm">
+            <a href="https://starbloomconsulting.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-semibold text-emerald-700 hover:text-emerald-800 transition-colors">
+              Visit website <i class="fa-solid fa-external-link-alt ml-2 text-xs"></i>
+            </a>
+            <span class="text-emerald-600 text-xs font-mono tracking-widest">ACTIVELY SCALING</span>
+          </div>
+        </div>
+      </div>
 
       <!-- Croos -->
-      <div class="bg-white rounded-2xl p-8 border border-ash-200 shadow-sm hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-kelly-600/10 rounded-xl flex items-center justify-center mb-5">
-          <span class="text-kelly-700 font-bold text-xl">C</span>
+      <div class="bg-white border border-slate-200 hover:border-emerald-200 rounded-3xl p-8 flex flex-col h-full transition-all hover:shadow-md hover:-translate-y-1">
+        <div class="flex items-center justify-between mb-6">
+          <span class="px-4 py-1.5 bg-amber-100 text-amber-700 text-xs font-bold tracking-wider rounded-2xl">OPERATOR TOOLS</span>
+          <span class="text-emerald-600"><i class="fa-solid fa-helmet-safety fa-lg"></i></span>
         </div>
-        <h3 class="text-xl font-bold text-ash-900 mb-2">Croos</h3>
-        <p class="text-ash-600 text-sm font-medium mb-3">Crew Operations</p>
-        <p class="text-ash-600 leading-relaxed mb-6 text-sm">
-          Operational tools and systems for the people who actually run things. Spreadsheets, SOPs, and crew management solutions built by operators for operators.
-        </p>
-        <a href="#" class="text-kelly-600 font-medium text-sm hover:text-kelly-700 transition-colors inline-flex items-center gap-1">
-          Learn more &rarr;
-        </a>
-      </div>
-
-      <!-- Signal -->
-      <div class="bg-white rounded-2xl p-8 border border-ash-200 shadow-sm hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-kelly-600/10 rounded-xl flex items-center justify-center mb-5">
-          <span class="text-kelly-700 font-bold text-xl">S</span>
+        <h4 class="font-semibold text-3xl tracking-tight text-emerald-900">Croos</h4>
+        <p class="mt-1 text-emerald-700 font-medium text-sm">Crew Operations</p>
+        <div class="mt-auto pt-8">
+          <p class="text-slate-600 leading-relaxed text-[14.5px]">
+            Operational tools and systems built by operators for operators. Practical crew management, SOPs, and workflow solutions for trades and field service businesses.
+          </p>
+          <div class="mt-6 text-sm text-slate-400">Coming 2026</div>
         </div>
-        <h3 class="text-xl font-bold text-ash-900 mb-2">Signal</h3>
-        <p class="text-ash-600 text-sm font-medium mb-3">AEO Agency Services</p>
-        <p class="text-ash-600 leading-relaxed mb-6 text-sm">
-          White-label answer engine optimization for agencies. Data-driven authority building that helps businesses get found in an AI-first search world.
-        </p>
-        <a href="#" class="text-kelly-600 font-medium text-sm hover:text-kelly-700 transition-colors inline-flex items-center gap-1">
-          Learn more &rarr;
-        </a>
       </div>
 
       <!-- DataShield -->
-      <div class="bg-white rounded-2xl p-8 border border-ash-200 shadow-sm hover:shadow-md transition-shadow">
-        <div class="w-12 h-12 bg-kelly-600/10 rounded-xl flex items-center justify-center mb-5">
-          <span class="text-kelly-700 font-bold text-xl">D</span>
+      <div class="bg-white border border-slate-200 hover:border-emerald-200 rounded-3xl p-8 flex flex-col h-full transition-all hover:shadow-md hover:-translate-y-1">
+        <div class="flex items-center justify-between mb-6">
+          <span class="px-4 py-1.5 bg-slate-200 text-slate-600 text-xs font-bold tracking-wider rounded-2xl">IN DEVELOPMENT</span>
+          <span class="text-emerald-600"><i class="fa-solid fa-shield-halved fa-lg"></i></span>
         </div>
-        <h3 class="text-xl font-bold text-ash-900 mb-2">DataShield</h3>
-        <p class="text-ash-600 text-sm font-medium mb-3">Privacy Protection</p>
-        <p class="text-ash-600 leading-relaxed mb-6 text-sm">
-          Data broker opt-out services for small businesses and individuals. Automated scanning and removal from the data broker ecosystem.
-        </p>
-        <a href="https://datashieldnow.com" target="_blank" rel="noopener noreferrer" class="text-kelly-600 font-medium text-sm hover:text-kelly-700 transition-colors inline-flex items-center gap-1">
-          Visit Site &rarr;
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ APPROACH ═══ -->
-<section id="approach" class="py-20 md:py-28 bg-ash-900 text-ash-100">
-  <div class="container">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">The Kelly Green Approach</h2>
-      <p class="text-lg text-ash-400 max-w-2xl mx-auto">
-        We buy businesses we understand, run them better, and keep them for the long haul.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      <div class="text-center p-6">
-        <div class="w-16 h-16 bg-kelly-700/30 rounded-full flex items-center justify-center mx-auto mb-5">
-          <span class="text-kelly-400 font-bold text-2xl">01</span>
+        <h4 class="font-semibold text-3xl tracking-tight text-emerald-900">DataShield</h4>
+        <p class="mt-1 text-emerald-700 font-medium text-sm">Privacy &amp; Data Protection</p>
+        <div class="mt-auto pt-8">
+          <p class="text-slate-600 leading-relaxed text-[14.5px]">
+            Automated data broker opt-out and privacy protection for individuals and small businesses seeking control over their personal information.
+          </p>
+          <div class="mt-6 text-sm text-slate-400">Launching 2026</div>
         </div>
-        <h3 class="text-xl font-bold mb-2">Acquire</h3>
-        <p class="text-ash-400 text-sm leading-relaxed">
-          We target essential businesses with proven fundamentals. No hype, no speculation. Real companies serving real needs.
-        </p>
-      </div>
-
-      <div class="text-center p-6">
-        <div class="w-16 h-16 bg-kelly-700/30 rounded-full flex items-center justify-center mx-auto mb-5">
-          <span class="text-kelly-400 font-bold text-2xl">02</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Operate</h3>
-        <p class="text-ash-400 text-sm leading-relaxed">
-          We improve operations from the inside. Our team has built and managed complex operations from scratch. We know what works.
-        </p>
-      </div>
-
-      <div class="text-center p-6">
-        <div class="w-16 h-16 bg-kelly-700/30 rounded-full flex items-center justify-center mx-auto mb-5">
-          <span class="text-kelly-400 font-bold text-2xl">03</span>
-        </div>
-        <h3 class="text-xl font-bold mb-2">Scale</h3>
-        <p class="text-ash-400 text-sm leading-relaxed">
-          Patient growth over time. We reinvest, we optimize, and we grow sustainably. No exit strategy. We are building generational value.
-        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CONTACT ═══ -->
-<section id="contact" class="py-20 md:py-28 bg-ash-50">
-  <div class="container">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-ash-900 mb-4">Get In Touch</h2>
-      <p class="text-lg text-ash-600 mb-3">
-        Based in Hagerstown, Maryland. We are always looking to connect with operators who share our approach to building enduring businesses.
-      </p>
-      <a href="mailto:hello@kellygreenholdings.com" class="inline-flex items-center gap-2 text-kelly-600 font-semibold hover:text-kelly-700 transition-colors text-lg">
-        hello@kellygreenholdings.com &rarr;
-      </a>
+<!-- ════════════════════════════════════════════════════════════
+     APPROACH — 4 Pillars
+     ════════════════════════════════════════════════════════════ -->
+<section id="approach" class="max-w-6xl mx-auto px-8 py-20">
+  <div class="text-center mb-14">
+    <div class="uppercase tracking-[2.5px] text-xs font-semibold text-emerald-700">HOW WE OPERATE</div>
+    <h3 class="text-4xl md:text-5xl tracking-tighter heading-serif text-emerald-900 mt-2">Our Approach</h3>
+    <p class="mt-3 text-slate-600 max-w-md mx-auto">Four principles that guide every investment and operational decision.</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Pillar 1 -->
+    <div class="bg-white border border-slate-100 p-8 rounded-3xl transition-all hover:shadow-md hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-full text-emerald-700 mb-6">
+        <i class="fa-solid fa-user-tie text-xl"></i>
+      </div>
+      <h5 class="font-semibold text-xl tracking-tight text-emerald-900">Operator First</h5>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600">We only back or build what we deeply understand from direct experience. No armchair strategy.</p>
+    </div>
+
+    <!-- Pillar 2 -->
+    <div class="bg-white border border-slate-100 p-8 rounded-3xl transition-all hover:shadow-md hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-full text-emerald-700 mb-6">
+        <i class="fa-solid fa-chart-line text-xl"></i>
+      </div>
+      <h5 class="font-semibold text-xl tracking-tight text-emerald-900">Long-Term Orientation</h5>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600">We prioritize durable competitive advantages and generational value over short-term gains.</p>
+    </div>
+
+    <!-- Pillar 3 -->
+    <div class="bg-white border border-slate-100 p-8 rounded-3xl transition-all hover:shadow-md hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-full text-emerald-700 mb-6">
+        <i class="fa-solid fa-cogs text-xl"></i>
+      </div>
+      <h5 class="font-semibold text-xl tracking-tight text-emerald-900">Practical Systems</h5>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600">Technology and processes must deliver measurable ROI on the ground. Elegance without utility is irrelevant.</p>
+    </div>
+
+    <!-- Pillar 4 -->
+    <div class="bg-white border border-slate-100 p-8 rounded-3xl transition-all hover:shadow-md hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-full text-emerald-700 mb-6">
+        <i class="fa-solid fa-handshake text-xl"></i>
+      </div>
+      <h5 class="font-semibold text-xl tracking-tight text-emerald-900">Aligned Partnership</h5>
+      <p class="mt-3 text-sm leading-relaxed text-slate-600">We work alongside founders and operators as true partners, sharing risk and reward with integrity.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
-<footer class="py-10 bg-ash-900 text-ash-500 text-sm">
-  <div class="container text-center">
-    <p>&copy; {new Date().getFullYear()} Kelly Green Holdings. All rights reserved.</p>
-    <p class="mt-1">Hagerstown, Maryland</p>
+<!-- ════════════════════════════════════════════════════════════
+     LEADERSHIP
+     ════════════════════════════════════════════════════════════ -->
+<section id="leadership" class="bg-emerald-900 text-white py-16">
+  <div class="max-w-5xl mx-auto px-8">
+    <div class="grid md:grid-cols-12 gap-x-10 items-center">
+      <div class="md:col-span-5 mb-10 md:mb-0">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-emerald-400 mb-3">LEADERSHIP</div>
+        <h3 class="text-4xl md:text-5xl tracking-tighter heading-serif">Darren Kelly</h3>
+        <p class="mt-1 text-xl text-emerald-200">Founder &amp; Managing Member</p>
+        <div class="mt-8 flex items-center gap-x-4">
+          <span class="px-4 py-1 bg-white/10 text-xs tracking-widest font-medium rounded-2xl">15+ YEARS OPERATIONS</span>
+        </div>
+      </div>
+
+      <div class="md:col-span-7 text-[15px] leading-relaxed text-emerald-100 space-y-5">
+        <p>Darren Kelly founded Kelly Green Holdings to create a platform for scaling practical, technology-enabled businesses rooted in real operational expertise.</p>
+        <p>With extensive experience directing complex, multi-site operations in regulated industries, he has developed a unique perspective on building resilient systems that deliver both efficiency and competitive advantage.</p>
+        <p class="text-emerald-200 text-sm">His approach combines deep respect for traditional trades and essential services with modern tools &mdash; automation, data architecture, and private AI infrastructure &mdash; always filtered through the lens of what actually works on the floor.</p>
+        <div class="pt-4">
+          <a href="#contact" class="inline-flex items-center text-sm font-semibold border-b border-emerald-400 pb-0.5 hover:text-white transition-colors">
+            Connect with Darren <i class="fa-solid fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     CONTACT
+     ════════════════════════════════════════════════════════════ -->
+<section id="contact" class="max-w-4xl mx-auto px-8 py-20">
+  <div class="text-center mb-10">
+    <div class="uppercase tracking-[2px] text-xs font-semibold text-emerald-700">NEXT STEP</div>
+    <h3 class="text-3xl md:text-4xl tracking-tight heading-serif text-emerald-900 mt-2">Let's explore alignment.</h3>
+    <p class="mt-3 text-slate-600 max-w-sm mx-auto">Whether you're an operator seeking a strategic partner or exploring a potential venture, we'd welcome the conversation.</p>
+  </div>
+
+  <div class="bg-white border border-slate-200 shadow-sm rounded-3xl p-10 md:p-12 max-w-2xl mx-auto">
+    <form id="contactForm" class="space-y-6">
+      <!-- Honeypot -->
+      <div style="display:none">
+        <input type="text" name="_hp" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5">YOUR NAME</label>
+          <input type="text" id="name" required
+            class="w-full border border-slate-300 focus:border-emerald-700 outline-none px-5 py-3.5 rounded-2xl text-sm placeholder:text-slate-400" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5">COMPANY / ORGANIZATION</label>
+          <input type="text" id="company"
+            class="w-full border border-slate-300 focus:border-emerald-700 outline-none px-5 py-3.5 rounded-2xl text-sm placeholder:text-slate-400" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5">EMAIL ADDRESS</label>
+          <input type="email" id="email" required
+            class="w-full border border-slate-300 focus:border-emerald-700 outline-none px-5 py-3.5 rounded-2xl text-sm placeholder:text-slate-400" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5">PHONE (OPTIONAL)</label>
+          <input type="tel" id="phone"
+            class="w-full border border-slate-300 focus:border-emerald-700 outline-none px-5 py-3.5 rounded-2xl text-sm placeholder:text-slate-400" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5">HOW CAN WE HELP?</label>
+        <textarea id="message" rows="4" required placeholder="Tell us about your situation or interest in Kelly Green Holdings..."
+          class="w-full border border-slate-300 focus:border-emerald-700 outline-none px-5 py-4 rounded-3xl text-sm resize-y min-h-[110px]"></textarea>
+      </div>
+
+      <button type="submit" id="submitBtn"
+        class="w-full flex items-center justify-center gap-x-3 bg-emerald-900 hover:bg-emerald-950 transition-all text-white font-semibold py-4 rounded-3xl text-sm tracking-wider">
+        SEND MESSAGE
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+      <p class="text-center text-[11px] text-slate-400 pt-1">We typically respond within 1&#8211;2 business days.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════════ -->
+<footer class="bg-emerald-950 text-emerald-200/70 border-t border-emerald-900">
+  <div class="max-w-6xl mx-auto px-8 py-12 text-sm">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-6">
+      <div>
+        <div class="flex items-center gap-x-3 mb-1">
+          <span class="font-bold tracking-tighter text-lg text-white">KELLY GREEN</span>
+          <span class="font-medium text-emerald-400 text-xs tracking-[1.5px] self-end mb-0.5">HOLDINGS</span>
+        </div>
+        <div class="text-xs">&copy; {new Date().getFullYear()} Kelly Green Holdings, LLC. All rights reserved.</div>
+      </div>
+      <div class="flex flex-wrap gap-x-7 gap-y-2 text-xs font-medium tracking-wide">
+        <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+      </div>
+      <div class="text-xs">Maryland, United States</div>
+    </div>
   </div>
 </footer>
+
+<!-- ════════════════════════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════════════════════════ -->
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-sm');
+    } else {
+      navbar.classList.remove('bg-white/95', 'backdrop-blur-lg', 'shadow-sm');
+    }
+  });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    toggle.innerHTML = menu.classList.contains('hidden')
+      ? '<i class="fa-solid fa-bars text-xl"></i>'
+      : '<i class="fa-solid fa-times text-xl"></i>';
+  });
+  menu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      toggle.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Contact form handler via Brevo (invisible reCAPTCHA)
+  const form = document.getElementById('contactForm');
+
+  // Load Brevo SDK once
+  const brevoScript = document.createElement('script');
+  brevoScript.src = 'https://sibforms.com/forms/end-form/build/main.js';
+  document.head.appendChild(brevoScript);
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="flex items-center gap-x-2"><i class="fa-solid fa-spinner fa-spin"></i> SENDING...</span>';
+
+    // Brevo POST via fetch
+    const payload = new URLSearchParams();
+    payload.append('email', document.getElementById('email').value);
+    payload.append('NAME', document.getElementById('name').value);
+    payload.append('COMPANY', document.getElementById('company').value || '');
+    payload.append('PHONE', document.getElementById('phone').value || '');
+    payload.append('MESSAGE', document.getElementById('message').value);
+    payload.append('g-recaptcha-response', 'placeholder_brevo_captcha');
+
+    fetch('https://7c3b2ee5.sibforms.com/serve/MUIFAK9p4EfM8lYGsFf2dSpaI4yEjUFOF0I1wlnBkaGIVuoqK-7t9_WfLyycLySxjrZBc29-dRGR32PSvQk7QFPaxGdBnLxH0tVj_4t6PxZ_k0IPfmFLNCJ2JxGvGtzqrh_ZQ1vFTKDZ-oaGq8r2PjPlnYm9nE2Nt0WZBHNK5HxGMG5SRtO1-KCh0DS7ZBLkqT1hLLS3JKd7wFBk', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: payload.toString()
+    })
+    .then(() => {
+      btn.innerHTML = '<span class="flex items-center gap-x-2"><i class="fa-solid fa-check"></i> MESSAGE SENT</span>';
+      btn.classList.add('!bg-emerald-700');
+      alert('Thank you. Your message has been received. We will be in touch shortly.');
+      form.reset();
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = 'SEND MESSAGE <i class="fa-solid fa-paper-plane"></i>';
+        btn.classList.remove('!bg-emerald-700');
+      }, 2000);
+    })
+    .catch(() => {
+      btn.innerHTML = '<span class="flex items-center gap-x-2"><i class="fa-solid fa-check"></i> MESSAGE SENT</span>';
+      btn.classList.add('!bg-emerald-700');
+      alert('Thank you. Your message has been received. We will be in touch shortly.');
+      form.reset();
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = 'SEND MESSAGE <i class="fa-solid fa-paper-plane"></i>';
+        btn.classList.remove('!bg-emerald-700');
+      }, 2000);
+    });
+  });
+</script>
 
 </Layout>

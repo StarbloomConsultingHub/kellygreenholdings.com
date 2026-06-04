@@ -1,101 +1,112 @@
 @import "tailwindcss";
 
 /* ============================================
-   KELLY GREEN HOLDINGS — Global Styles
-   Earthy, grounded, enduring. Operator-built.
+   KELLY GREEN HOLDINGS — Grok-Inspired Styles
+   Deep emerald: #14532D | Warm gold: #B45309
    ============================================ */
 
 @theme {
-  /* ── Kelly Green Core Palette ── */
-  --color-kelly-900: #0a2e1a;
-  --color-kelly-800: #14522d;
-  --color-kelly-700: #1f7a3e;
-  --color-kelly-600: #2d9f50;
-  --color-kelly-500: #3cb85e;
-  --color-kelly-400: #65d083;
-  --color-kelly-300: #93e0a8;
-  --color-kelly-200: #c0ecc9;
-  --color-kelly-100: #e0f4e3;
+  /* ── Kelly Green Core ── */
+  --color-emerald-950: #052e16;
+  --color-emerald-900: #14532d;
+  --color-emerald-800: #166534;
+  --color-emerald-700: #15803d;
+  --color-emerald-600: #16a34a;
+  --color-emerald-500: #22c55e;
+  --color-emerald-400: #4ade80;
+  --color-emerald-300: #86efac;
+  --color-emerald-200: #bbf7d0;
+  --color-emerald-100: #dcfce7;
+  --color-emerald-50:  #f0fdf4;
 
-  /* ── Warm Neutrals ── */
-  --color-ash-950: #12100e;
-  --color-ash-900: #1c1917;
-  --color-ash-800: #292524;
-  --color-ash-700: #44403c;
-  --color-ash-600: #57534e;
-  --color-ash-500: #78716c;
-  --color-ash-400: #a8a29e;
-  --color-ash-300: #d6d3d1;
-  --color-ash-200: #e7e5e4;
-  --color-ash-100: #f5f5f4;
-  --color-ash-50:  #fafaf9;
+  /* ── Warm Gold Accent ── */
+  --color-gold-700: #a16207;
+  --color-gold-600: #b45309;
+  --color-gold-500: #d97706;
+  --color-gold-400: #f59e0b;
+  --color-gold-300: #fbbf24;
 
-  /* ── Gold Accent ── */
-  --color-gold-600: #a67c00;
-  --color-gold-500: #c99500;
-  --color-gold-400: #e6b800;
-  --color-gold-300: #f2cc33;
+  /* ── Slate Neutrals ── */
+  --color-slate-50:  #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
 
-  /* ── Semantic Tokens ── */
-  --color-primary: var(--color-kelly-600);
-  --color-primary-dark: var(--color-kelly-800);
-  --color-primary-light: var(--color-kelly-400);
-  --color-surface: var(--color-ash-50);
-  --color-surface-dark: var(--color-ash-900);
-  --color-text: var(--color-ash-900);
-  --color-text-light: var(--color-ash-600);
-  --color-text-on-dark: var(--color-ash-100);
-  --color-accent: var(--color-gold-500);
+  /* ── Semantic ── */
+  --color-primary: var(--color-emerald-900);
+  --color-primary-dark: var(--color-emerald-950);
+  --color-primary-light: var(--color-emerald-100);
+  --color-accent: var(--color-gold-600);
 }
 
-/* ── Base Reset ── */
+/* ── Fonts ── */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebunDXbtM.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v18/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2zl7W0Q5n-w.woff2) format('woff2');
+}
+
+/* ── Base ── */
 * { box-sizing: border-box; margin: 0; }
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: var(--color-text);
-  background: var(--color-surface);
+  color: var(--color-slate-800);
+  background: var(--color-slate-50);
   line-height: 1.6;
 }
 
-/* ── Typography ── */
-h1, h2, h3, h4 {
+/* ── Utilities ── */
+.heading-serif {
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
-/* ── Container ── */
-.container {
+.container-site {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
-/* ── Utility ── */
-.gradient-text {
-  background: linear-gradient(135deg, var(--color-kelly-600), var(--color-kelly-400));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.section-header:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(to right, #14532d, #b45309);
+  border-radius: 3px;
 }
 
-.lead {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: var(--color-text-light);
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Responsive Container Tweak ── */
-@media (min-width: 768px) {
-  .container {
-    padding: 0 2rem;
-  }
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
 }
