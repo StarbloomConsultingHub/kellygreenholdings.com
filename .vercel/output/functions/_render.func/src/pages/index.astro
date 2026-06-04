@@ -14,11 +14,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="/" class="flex items-center gap-x-3">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-emerald-900">
-        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-      </svg>
+      <img src="/logo.jpg" alt="Kelly Green Holdings" class="h-10 w-auto" />
       <div>
         <div class="font-extrabold text-2xl tracking-tighter text-emerald-900 leading-none">KELLY GREEN</div>
         <div class="text-[10px] font-semibold tracking-[3px] text-amber-700 -mt-1">HOLDINGS</div>
@@ -349,8 +345,11 @@ import Layout from '../layouts/Layout.astro';
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-6">
       <div>
         <div class="flex items-center gap-x-3 mb-1">
-          <span class="font-bold tracking-tighter text-lg text-white">KELLY GREEN</span>
-          <span class="font-medium text-emerald-400 text-xs tracking-[1.5px] self-end mb-0.5">HOLDINGS</span>
+          <img src="/logo.jpg" alt="Kelly Green Holdings" class="h-8 w-auto brightness-200" />
+          <div>
+            <div class="font-bold tracking-tighter text-lg text-white leading-none">KELLY GREEN</div>
+            <div class="text-[9px] font-medium text-emerald-400 tracking-[1.5px]">HOLDINGS</div>
+          </div>
         </div>
         <div class="text-xs">&copy; {new Date().getFullYear()} Kelly Green Holdings, LLC. All rights reserved.</div>
       </div>
