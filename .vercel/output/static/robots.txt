@@ -1,0 +1,5 @@
+# Kelly Green Holdings
+User-agent: *
+Allow: /
+
+Sitemap: https://kellygreenholdings.com/sitemap-index.xml
